@@ -57,7 +57,7 @@
   appearance: none;
 
   @media($phone) {
-    flex: 1;
+    flex-basis: 1;
   }
 
   a {
@@ -67,13 +67,11 @@
     padding: 8px 16px;
     text-decoration: none;
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
   }
 
   &__text {
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
   }
 
