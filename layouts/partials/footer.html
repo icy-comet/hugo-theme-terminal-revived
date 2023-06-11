@@ -1,13 +1,10 @@
 <footer class="footer">
   <div class="footer__inner">
-    {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">
-        <span>{{ $.Site.Copyright | safeHTML }}</span>
-    {{ else }}
       <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
-    {{ end }}
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+    {{ with site.Copyright -}}
+        <span>© {{ now.Year }} {{ . | safeHTML }} :: </span>
+    {{ end -}}
+      <span>Theme: <a href="https://github.com/icy-comet/hugo-theme-terminal-revived" target="_blank">teminal-revived</a></span>
       </div>
   </div>
 </footer>
