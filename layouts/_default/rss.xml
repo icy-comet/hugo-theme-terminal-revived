@@ -6,7 +6,7 @@
 {{- else -}}
 {{- $pages = $pctx.Pages -}}
 {{- end -}}
-{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
 {{- end -}}
@@ -14,13 +14,13 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <title>{{ if eq  .Title  site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
-    <description>Content feed {{ if ne  .Title  .Site.Title }}{{ with .Title }}for {{.}} {{ end }}{{ end }}of {{ .Site.Title }}</description>
-    <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-    <managingEditor>{{.}}{{ with .Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
-    <webMaster>{{.}}{{ with .Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
+    <description>Content feed {{ if ne  .Title  site.Title }}{{ with .Title }}for {{.}} {{ end }}{{ end }}of {{ site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>{{ with site.LanguageCode }}
+    <language>{{.}}</language>{{end}}{{ with site.Author.email }}
+    <managingEditor>{{.}}{{ with site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with site.Author.email }}
+    <webMaster>{{.}}{{ with site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with site.Copyright }}
     <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
     <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
     {{- with .OutputFormats.Get "RSS" -}}
@@ -31,10 +31,10 @@
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email }}<author>{{.}}{{ with .Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      {{ with site.Author.email }}<author>{{.}}{{ with site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ with .Description | html }}{{ . }}{{ else }}{{ .Summary | html }}{{ end -}}</description>
-      {{- if .Site.Params.fullContentInRss }}
+      {{- if site.Params.fullContentInRss }}
       <content:encoded>{{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}</content:encoded>
       {{- end }}
     </item>
