@@ -32,10 +32,10 @@
   {{ partial "cover.html" . }}
   {{ end }}
 
-  {{ if (.Params.Toc | default site.Params.Toc) }}
+  {{ if (.Params.Toc | or site.Params.Toc) | and (ne (print .TableOfContents) "" "<nav id=\"TableOfContents\"></nav>") }}
     <div class="table-of-contents">
       <h2>
-        {{ (.Params.TocTitle | default site.Params.TocTitle) | default "Table of Contents" }}
+        {{- (.Params.TocTitle | default site.Params.TocTitle) | default "Table of Contents" -}}
       </h2>
       {{ .TableOfContents }}
     </div>
