@@ -1,22 +1,11 @@
 +++
 title = "About"
 date = "2019-01-25"
-author = "Radek"
 +++
 
 # Hi there
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique placerat purus, id porttitor lectus ullamcorper non. Morbi et nisi turpis. In convallis vulputate felis sit amet mollis. Curabitur ornare, odio sed vestibulum condimentum, eros nisl euismod eros, ac efficitur justo dui et justo. Nam eget eros et justo aliquet rhoncus sit amet id erat. Nam sed convallis ligula, quis feugiat diam. Donec nec commodo tortor. Proin pharetra mattis quam, vel venenatis justo sagittis in. Mauris enim eros, blandit ac ligula id, mattis venenatis elit. Nunc sagittis rhoncus consequat. Proin malesuada ex ex, at efficitur mi congue vel. Pellentesque vitae sodales ligula, eu vulputate eros. Curabitur maximus neque at nulla egestas, a convallis diam fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-My name is Radek and I'm the author of this theme. I made it to help you present your ideas easier.
+Nam fringilla bibendum mauris, vitae consectetur neque rhoncus quis. Mauris suscipit, felis sed imperdiet volutpat, quam enim fermentum nisi, a mattis ante est in magna. Pellentesque augue metus, mollis et mi a, fringilla fringilla mauris. Ut lacus purus, faucibus non lacus sollicitudin, pulvinar scelerisque ex. Curabitur pharetra facilisis metus, eu tincidunt justo ornare vitae. Nunc consequat ex non diam ultrices consequat. Vivamus tincidunt enim arcu, et interdum nunc eleifend nec. In quis nunc ac urna blandit euismod eu eu nunc. Nunc ullamcorper, lorem ut rutrum varius, odio tellus porttitor est, eget porta augue lacus ut tortor. Vivamus sem nisi, ultricies sed arcu quis, placerat porttitor quam. Pellentesque auctor mattis lacus, id hendrerit lectus viverra ut. Mauris aliquet elementum accumsan. Vestibulum non commodo ipsum.
 
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
-
-This theme is pretty basic and covers all of the essentials. All you have to do is start typing!
-
-The theme includes:
-
-- **5 duotone themes**, depending on your preferences (orange, red, blue, green, pink)
-- [**Fira Code**](https://github.com/tonsky/FiraCode) as default monospaced font. It's gorgeous!
-- **really nice, custom duotone** syntax highlighting based on [**PrismJS**](https://prismjs.com)
-- mobile friendly layout
-
-So, there you have it... enjoy!
+Phasellus aliquam, dolor vitae ornare tristique, nisi nisi luctus ipsum, ut feugiat felis mauris vel nisi. Etiam gravida in est eget porttitor. Ut est metus, gravida nec finibus a, sollicitudin ac sem. Quisque at urna sit amet quam porttitor consectetur. Aliquam ac odio pretium, lobortis risus quis, laoreet libero. Nullam felis nisl, aliquet at blandit sed, pretium at odio. Maecenas erat lorem, rhoncus nec volutpat quis, aliquam et enim. In at massa ac ex varius suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
