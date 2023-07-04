@@ -13,7 +13,7 @@
       {{ if (len $termPages | ne 0) }}
       {{ $name := $term.Name }}
       {{ $count := len $termPages }}
-      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+      {{ with site.GetPage (printf "/%s/%s" $type $name) }}
         <li>
           <a class="terms-title" href="{{ .Permalink }}">{{ .Name }} [{{ $count }}]</a>
         </li>

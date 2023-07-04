@@ -2,7 +2,7 @@
   <li class="menu__trigger">{{ .Language.LanguageName }}&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
-      {{ range $.Site.Home.AllTranslations }}
+      {{ range site.Home.AllTranslations }}
         <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
       {{ end }}
     </ul>

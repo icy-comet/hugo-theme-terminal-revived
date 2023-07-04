@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{ $localColorStyles.Permalink }}">
 {{ else }}
   <!-- Theme Variables -->
-  {{ $colorCss := resources.Get (printf "css/color/%s.scss" ($.Site.Params.ThemeColor | default "orange")) }}
+  {{ $colorCss := resources.Get (printf "css/color/%s.scss" (site.Params.ThemeColor | default "orange")) }}
   {{ $css := slice $colorCss $defaultStyles | resources.Concat "css/base.scss" }}
   {{ $options := (dict "targetPath" "styles.css" "outputStyle" "compressed" "enableSourceMap" true "precision" 6 "includePaths" (slice "node_modules")) }}
   {{ $styles := $css | resources.ToCSS $options }}
@@ -47,8 +47,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ . | absURL }}">
   {{ end -}}
 {{ else -}}
-  <link rel="shortcut icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ printf "img/theme-colors/%s.png" (or .Params.color $.Site.Params.ThemeColor | default "orange") | absURL }}">
+  <link rel="shortcut icon" href="{{ printf "img/theme-colors/%s.png" (or .Params.color site.Params.ThemeColor | default "orange") | absURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ printf "img/theme-colors/%s.png" (or .Params.color site.Params.ThemeColor | default "orange") | absURL }}">
 {{ end -}}
 
 {{ with site.Params.siteManifest -}}
@@ -56,11 +56,11 @@
 {{ end -}}
 
 {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ site.Title }}" />
 {{ end }}
 
 {{ with .OutputFormats.Get "json" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ site.Title }}" />
 {{ end }}
 
 {{ partial "extended_head.html" . }}

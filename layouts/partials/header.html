@@ -3,14 +3,14 @@
     <div class="header__logo">
       {{ partial "logo.html" . }}
     </div>
-    {{ if len $.Site.Menus }}
+    {{ if len site.Menus }}
       {{ partial "mobile-menu.html" . }}
     {{ end }}
-    {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+    {{ if and site.Params.showLanguageSelector (len site.Home.AllTranslations) }}
       {{ partial "language-menu.html" . }}
     {{ end }}
   </div>
-  {{ if len $.Site.Menus }}
+  {{ if len site.Menus }}
     {{ partial "menu.html" . }}
   {{ end }}
 </header>

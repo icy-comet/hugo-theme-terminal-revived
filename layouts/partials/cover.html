@@ -1,5 +1,5 @@
 {{- $cover := false -}}
-{{- $autoCover := default $.Site.Params.autoCover false }}
+{{- $autoCover := default site.Params.autoCover false }}
 
 {{- if index .Params "cover" -}}
   {{- if .Resources.GetMatch .Params.Cover }}
@@ -7,7 +7,7 @@
   {{- else -}}
     {{- $cover = absURL .Params.Cover -}}
   {{- end -}}
-{{- else if $.Site.Params.AutoCover -}}
+{{- else if site.Params.AutoCover -}}
   {{- if (not .Params.Cover) -}}
     {{- if .Resources.GetMatch "cover.*" -}}
       {{- $cover = (.Resources.GetMatch "cover.*").RelPermalink -}}

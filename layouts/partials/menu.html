@@ -1,18 +1,18 @@
 <nav class="navigation-menu">
   <ul class="navigation-menu__inner menu--desktop">
-    {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
-      {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+    {{ if or site.Params.showMenuItems ( eq site.Params.showMenuItems 0 ) }}
+      {{ range first site.Params.showMenuItems site.Menus.main }}
         {{ if not .HasChildren }}
           <li><a href="{{ .URL | absURL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
-      {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+      {{ if gt (len site.Menus.main) site.Params.showMenuItems }}
         <li>
           <ul class="menu">
-            <li class="menu__trigger">{{ $.Site.Params.MenuMore }}&nbsp;▾</li>
+            <li class="menu__trigger">{{ site.Params.MenuMore }}&nbsp;▾</li>
             <li>
               <ul class="menu__dropdown">
-                {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+                {{ range last (sub (len site.Menus.main) site.Params.showMenuItems) site.Menus.main }}
                   {{ if not .HasChildren }}
                     <li><a href="{{ .URL | absURL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
                   {{ end }}
@@ -23,7 +23,7 @@
         </li>
       {{ end }}
     {{ else }}
-      {{ range $.Site.Menus.main }}
+      {{ range site.Menus.main }}
         {{ if not .HasChildren }}
           <li><a href="{{ .URL | absURL }}" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
         {{ end }}

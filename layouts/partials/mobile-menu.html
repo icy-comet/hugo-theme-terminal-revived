@@ -2,14 +2,14 @@
   <li class="menu__trigger">Menu&nbsp;▾</li>
   <li>
     <ul class="menu__dropdown">
-      {{ range $.Site.Menus.main }}
+      {{ range site.Menus.main }}
         {{ if not .HasChildren }}
           <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
-      {{ if and $.Site.Params.showLanguageSelector (len $.Site.Home.AllTranslations) }}
+      {{ if and site.Params.showLanguageSelector (len site.Home.AllTranslations) }}
         <hr />
-        {{ range $.Site.Home.AllTranslations }}
+        {{ range site.Home.AllTranslations }}
           <li>
             <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
           </li>
