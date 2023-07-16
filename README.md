@@ -13,6 +13,14 @@ I currently cannot document and make this fork presentable. However, below are t
 - `hiddenPage` mode to limit page discoverability as much as possible
 - ...and several more tweaks and fixes that could be reviewed with commit history
 
+## TODO
+- [ ] Fix the nosize favicon link in the head partial
+- [ ] Remove prism
+- [ ] Add search function
+- [ ] Review all existing config params
+- [ ] Update example site
+- [ ] Remaster collapsible code section if needed. Maybe tailor it for any text.
+
 ## License
 Copyright © 2023 Aniket Teredesai ([@icy-comet](https://github.com/icy-comet))
 
