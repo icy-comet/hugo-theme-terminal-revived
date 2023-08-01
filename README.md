@@ -15,7 +15,6 @@ I currently cannot document and make this fork presentable. However, below are t
 
 ## TODO
 - [ ] Fix the nosize favicon link in the head partial
-- [ ] Remove prism
 - [ ] Add search function
 - [ ] Review all existing config params
 - [ ] Update example site
