@@ -14,7 +14,6 @@ I currently cannot document and make this fork presentable. However, below are t
 - ...and several more tweaks and fixes that could be reviewed with commit history
 
 ## TODO
-- [ ] Fix the nosize favicon link in the head partial
 - [ ] Add search function
 - [ ] Review all existing config params
 - [ ] Update example site
