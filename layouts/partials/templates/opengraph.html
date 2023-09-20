@@ -2,7 +2,7 @@
 <meta property="og:description" content="{{ if .IsHome }}{{ site.Params.subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ with .Param "cover" -}}
+{{ with (.Params.cover | or site.Params.cover) -}}
 {{ with ($.Resources.GetMatch .) -}}
 <meta property="og:image" content="{{ .RelPermalink | absURL }}" />
 {{ else -}}
