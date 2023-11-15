@@ -17,7 +17,6 @@ I currently cannot document and make this fork presentable. However, below are t
 - [ ] Add search function
 - [ ] Review all existing config params
 - [ ] Update example site
-- [ ] Remaster collapsible code section if needed. Maybe tailor it for any text.
 
 ## License
 Copyright © 2023 Aniket Teredesai ([@icy-comet](https://github.com/icy-comet))

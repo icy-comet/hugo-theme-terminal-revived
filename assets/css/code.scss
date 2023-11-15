@@ -2,8 +2,6 @@
   $border-color: mix($accent, #999, 90%);
 
   position: relative;
-  width: 100%;
-  margin: 40px 0;
 
   input[type="checkbox"] {
     position: absolute;
@@ -11,20 +9,9 @@
   }
 
   input[type="checkbox"]:checked {
-    ~ pre,
-    ~ .code-toolbar pre {
-      height: 0;
-      padding: 0;
+    ~ div.highlight {
+      display: none;
       border-top: none;
-    }
-
-    ~ .code-toolbar {
-      padding: 0;
-      border-top: none;
-
-      .toolbar {
-        display: none;
-      }
     }
 
     ~ label .collapsable-code__toggle:after {
@@ -68,17 +55,5 @@
     &:after {
       content: attr(data-label-collapse);
     }
-  }
-
-  pre {
-    margin-top: 0;
-
-    &::first-line {
-      line-height: 0;
-    }
-  }
-
-  .code-toolbar {
-    margin: 0;
   }
 }
